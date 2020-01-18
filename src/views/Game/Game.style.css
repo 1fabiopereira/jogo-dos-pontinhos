@@ -1,11 +1,11 @@
-.main-screen {
+.game-page {
   width: 100%;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
-.main-screen__note {
+.game-page__note {
   height: 10%;
   width: 100%;
   max-width: 480px;
@@ -15,13 +15,35 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
-.main-screen__note__link {
+.game-page__note button {
+  height: 30px;
+  width: 30%;
+  background-color: #de11b2;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.game-page__note a {
+  height: 25px;
+  width: 30%;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 5px;
+}
+
+.game-page__note__link {
   text-decoration: underline;
 }
 
-.main-screen__scores {
+.game-page__scores {
   height: 15%;
   max-width: 480px;
   width: 100%;
@@ -31,7 +53,7 @@
   align-items: center;
 }
 
-.main-screen__grid {
+.game-page__grid {
   width: 90%;
   height: 60%;
   margin: 30px auto;

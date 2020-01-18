@@ -11,16 +11,28 @@ import './Game.style.css';
 export default () => {
     const dispatch = useDispatch();
     const data = useSelector(state => state.game);
-    const {scores, names, rows, columns, isGameComplete} = data;
+    const {
+        scores,
+        names,
+        rows,
+        columns,
+        isGameComplete
+    } = data;
 
-    // Dispatch action to restart game
-    function restartGame() {
+    // Dispatch action to end game
+    function endGame() {
         dispatch(GameActions.restartGame());
+    }
+
+    // Dispatch action to end game
+    function restartGame() {
+        dispatch(GameActions.startGame({rows, columns, names}));
+        dispatch(GameActions.generateGrid());
     }
 
     // Dispatch action to render the grid
     function generateGrid() {
-        if(window.location.href.indexOf('game') !== 0) {
+        if(window.location.href.indexOf('game') !== -1) {
             dispatch(GameActions.generateGrid());
         }
     }
@@ -34,17 +46,20 @@ export default () => {
 
     // Render view
     return (
-        <div className="main-screen">
-            <div className="main-screen__scores">
+        <div className="game-page">
+            <div className="game-page__scores">
                 <Score title={names[0]} color={Colors.PrimaryBarColor} value={scores[0]} />
                 <Score title={names[1]} color={Colors.SecondaryBarColor} value={scores[1]} />
             </div>
-            <div className="main-screen__grid">
+            <div className="game-page__grid">
                 <Grid state={{...data}} dispatch={dispatch} />
             </div>
             <br/>
-            <div className="main-screen__note">
-                <Link to="/" onClick={restartGame}>SAIR</Link>
+            <div className="game-page__note">
+                <button type="submit" onClick={restartGame}>REINICIAR</button>
+            </div>
+            <div className="game-page__note">
+                <Link to="/" onClick={endGame}>SAIR</Link>
             </div>
         </div>
     );
