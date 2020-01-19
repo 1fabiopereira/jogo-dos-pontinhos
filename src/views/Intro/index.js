@@ -15,12 +15,17 @@ function Intro() {
 
   // Dispatch action to start game
   function startGame() {
-    const rowsInt = parseInt(rows || 0, 10);
-    const columnsInt = parseInt(columns || 0, 10);
+    const rowsInt = parseInt(rows, 10);
+    const columnsInt = parseInt(columns, 10);
 
     if (!player1 || !player2) {
          window.alert('😭 O nome dos jogadores deve ser definido.');
          return;
+    }
+
+    if (isNaN(rowsInt) || isNaN(columnsInt)) {
+      window.alert('😭 Os campos Nº de Linhas e Nº de colunas devem ser números.');
+      return;
     }
 
     if (rowsInt <= 0 || rowsInt > 10 || columnsInt <= 0 || columnsInt > 10) {
