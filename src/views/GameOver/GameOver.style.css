@@ -55,3 +55,12 @@
   font-size: 12px;
   text-align: center;
 }
+
+.start-menu__bg-purple {
+  background-color: #de11b2 !important;
+}
+
+.start-menu__font-40px {
+  font-size: 40px;
+}
+

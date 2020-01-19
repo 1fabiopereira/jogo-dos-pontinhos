@@ -11,20 +11,14 @@ import './Game.style.css';
 export default () => {
     const dispatch = useDispatch();
     const data = useSelector(state => state.game);
-    const {
-        scores,
-        names,
-        rows,
-        columns,
-        isGameComplete
-    } = data;
+    const { scores, names, rows, columns, isGameComplete } = data;
 
     // Dispatch action to end game
     function endGame() {
         dispatch(GameActions.restartGame());
     }
 
-    // Dispatch action to end game
+    // Dispatch action to restart game
     function restartGame() {
         dispatch(GameActions.startGame({rows, columns, names}));
         dispatch(GameActions.generateGrid());

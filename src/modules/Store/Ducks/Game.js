@@ -13,7 +13,14 @@ export const Types = {
 export const Actions = {
     startGame: ({ rows, columns, names }) => ({
         type: Types.START_GAME,
-        payload: { rows, columns, names, scores: [0, 0], currentPlayer: 1 },
+        payload: {
+            rows,
+            columns,
+            names,
+            scores: [0, 0],
+            currentPlayer: 1,
+            isGameComplete: false
+        },
     }),
 
     generateGrid: () => ({
