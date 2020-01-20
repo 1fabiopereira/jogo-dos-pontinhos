@@ -1,66 +1,74 @@
-.start-menu {
+.game-over__app-logo {
+  font-size: 100px;
+  margin-top: 13px;
+}
+
+.game-over {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
   height: 100%;
+  justify-content: center;
+  margin: auto;
   max-height: 440px;
   max-width: 500px;
-  margin: auto;
-  justify-content: center;
+  width: 100%;
 }
 
-.start-menu__header {
-  flex-direction: column;
-  display: flex;
+.game-over__header {
   align-items: center;
-  justify-content: space-around;
-  height: 40%;
+  display: flex;
+  flex-direction: column;
   font-size: 24px;
   font-weight: 800;
-}
-
-.start-menu__game-logo {
-  width: 30%;
-}
-
-.start-menu__input {
-  display: flex;
-  width: 100%;
-  height: 10%;
-  flex-direction: row;
-  align-items: center;
+  height: 40%;
   justify-content: space-around;
-  margin: 10px;
-}
-
-.start-menu__button {
-  display: flex;
-  width: 100%;
-  height: 20%;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-top: 30px;
-}
-
-.start-menu__button button {
-  height: 30px;
-  width: 30%;
-  background-color: #61dafb;
-  color: white;
-  font-weight: bold;
-  font-size: 15px;
-}
-
-.start-menu__note {
-  font-size: 12px;
   text-align: center;
 }
 
-.start-menu__bg-purple {
-  background-color: #de11b2 !important;
+.game-over__game-logo {
+  width: 30%;
 }
 
-.start-menu__font-40px {
-  font-size: 40px;
+.game-over__input {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 10%;
+  justify-content: space-around;
+  margin: 10px;
+  width: 100%;
 }
+
+.game-over__button {
+  display: flex;
+  flex-direction: row;
+  height: 20%;
+  justify-content: space-around;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.game-over__button button, .game-over__bg-purple {
+  background-color: #fa6965;
+  color: white;
+  height: 30px;
+  text-decoration: none;
+  padding: 7px;
+}
+
+.game-over__note button {
+  background-color: #fa6965;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  height: 30px;
+  margin-top: 30px;
+}
+
+.game-over__note a {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
 

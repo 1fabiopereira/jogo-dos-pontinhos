@@ -1,62 +1,57 @@
-.start-menu__app-logo {
+.intro__app-logo {
   font-size: 100px;
   margin-top: 13px;
 }
 
-.start-menu {
+.intro {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
   height: 100%;
+  justify-content: center;
+  margin: auto;
   max-height: 440px;
   max-width: 500px;
-  margin: auto;
-  justify-content: center;
+  width: 100%;
 }
 
-.start-menu__header {
-  flex-direction: column;
-  display: flex;
+.intro__header {
   align-items: center;
-  justify-content: space-around;
-  height: 40%;
+  display: flex;
+  flex-direction: column;
   font-size: 24px;
   font-weight: 800;
+  height: 40%;
+  justify-content: space-around;
 }
 
-.start-menu__game-logo {
+.intro__game-logo {
   width: 30%;
 }
 
-.start-menu__input {
-  display: flex;
-  width: 100%;
-  height: 10%;
-  flex-direction: row;
+.intro__input {
   align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 10%;
   justify-content: space-around;
   margin: 10px;
+  width: 100%;
 }
 
-.start-menu__button {
+.intro__button {
   display: flex;
-  width: 100%;
-  height: 20%;
   flex-direction: row;
+  height: 20%;
   justify-content: space-around;
   margin-top: 30px;
+  width: 100%;
 }
 
-.start-menu__button button {
-  height: 30px;
-  width: 30%;
+.intro__button button {
   background-color: #fa6965;
   color: white;
-  font-weight: bold;
   font-size: 15px;
-}
-
-.start-menu__note {
-  font-size: 12px;
-  text-align: center;
+  font-weight: bold;
+  height: 30px;
+  width: 30%;
 }

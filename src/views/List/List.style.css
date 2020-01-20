@@ -1,0 +1,14 @@
+table {
+  width: 100%;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.out {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import { Actions as GameActions } from '../../modules/Store/Ducks/Game';
+import GameActions from '../../Store/Ducks/Game/actions';
 import Dot from "../Dot/Dot";
 import Box from "../Box/Box";
 import Bar from "../Bar/Bar";
