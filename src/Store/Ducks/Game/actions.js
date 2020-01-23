@@ -8,6 +8,7 @@ export const Types = {
   COMMON: '@game/COMMON'
 };
 
+// Start game action creator
 const startGame = data => {
   return {
     type: Types.START_GAME,
@@ -15,25 +16,31 @@ const startGame = data => {
   };
 };
 
+// Generate grid action creator
 const generateGrid = () => ({ type: Types.GENERATE_GRID });
 
+// Update grid action creator
 const updateGrid = (row, column, type) => ({
   type: Types.UPDATE_GRID,
   payload: { row, column, type }
 });
 
+// Restart game action creator
 const restartGame = () => ({ type: Types.RESTART_GAME });
 
+// Save game action creator
 const saveGame = ({ code }) => ({
   type: Types.SAVE_GAME,
   payload: { code }
 });
 
+// Load game action creator
 const loadGame = payload => ({
   type: Types.LOAD_GAME,
   payload: { ...payload }
 });
 
+// Common actions
 const common = payload => ({
   type: Types.COMMON,
   payload: { ...payload }

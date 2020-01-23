@@ -78,7 +78,7 @@ export default () => {
         />
       </div>
       <div className="game__grid">
-        <Grid state={{ ...data }} dispatch={dispatch} />
+        <Grid />
       </div>
       <br />
       <div className="game__note">

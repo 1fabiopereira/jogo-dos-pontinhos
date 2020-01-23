@@ -1,0 +1,14 @@
+sudo: false
+install: true
+language: node_js
+node_js:
+  - stable
+before_install:
+  - npm i -g yarn
+  - yarn --version
+  - yarn install
+script:
+  - yarn run test
+cache:
+  directories:
+    - $HOME/.yarn-cache

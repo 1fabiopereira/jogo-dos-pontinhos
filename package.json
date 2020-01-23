@@ -22,7 +22,7 @@
     "start": "yarn run build && node server.js",
     "dev": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test src/*.spec.js src/**/*.spec.js src/**/**/*.spec.js src/**/**/**/*.spec.js --verbose --forceExit",
     "eject": "react-scripts eject",
     "lint": "eslint --fix src/*.js src/**/*.js src/**/**/*.js src/**/**/**/*.js"
   },
@@ -53,6 +53,7 @@
     "husky": "^4.0.10",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
-    "pretty-quick": "^2.0.1"
+    "pretty-quick": "^2.0.1",
+    "sinon": "^8.1.1"
   }
 }

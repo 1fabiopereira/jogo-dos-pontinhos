@@ -7,7 +7,7 @@ class Storage {
    * @param game
    * @return {object}
    */
-   get(key = 'dot-index', game = null) {
+   get(key = 'dot-game', game = null) {
     const swap = LocalStorage.getObject(key, {}, true);
     if (game && swap[game]) {
       return swap[game];
@@ -22,7 +22,7 @@ class Storage {
    * @param key
    * @return {object}
    */
-  add(game, key = 'dot-index') {
+  add(game, key = 'dot-game') {
     const swap = this.get();
     const code = game.code ? game.code : new Date().getTime();
     swap[code] = ({...game, code});
